@@ -1,0 +1,14 @@
+server:
+    port: 9090
+
+zuul:
+    prefix: /api
+    routes:
+        reader:
+            path: /reader/**
+            serviceId: filereader
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
