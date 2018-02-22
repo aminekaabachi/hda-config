@@ -7,6 +7,17 @@ zuul:
         reader:
             path: /reader/**
             serviceId: filereader
+    host:
+        connect-timeout-millis: 10000
+        socket-timeout-millis: 60000
+
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 60000
 
 eureka:
   client:
