@@ -7,6 +7,9 @@ zuul:
         reader:
             path: /reader/**
             serviceId: filereader
+        packager:
+            path: /packager/**
+            serviceId: packager
     host:
         connect-timeout-millis: 10000
         socket-timeout-millis: 60000
